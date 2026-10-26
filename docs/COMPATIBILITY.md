@@ -1,29 +1,30 @@
-# Compatibility and validation
+# Compatibility and Validation
 
-## Tested configuration
+## Tested environment
 
-- Windows 11 x64 virtual machine.
-- Xenetech Graphic Workstation native executable version `6.59.132.3`.
-- digART independent x64 launcher controlling an installed x86 application.
+| Component | Configuration |
+| --- | --- |
+| Operating system | Windows 11 x64 virtual machine |
+| Xenetech executable | Graphic Workstation `6.59.132.3` |
+| Original application | Native 32-bit Windows application |
+| Modification launcher | Separate 64-bit Windows application |
 
-No claim is made that all Xenetech builds, other Windows versions, or different system configurations are supported.
-
-## Observed acceptance tests
+## Verified tests
 
 | Scenario | Result |
 | --- | --- |
-| Upgrade installation over existing digART installation | Passed |
-| Fresh install following digART uninstall | Passed |
+| Installation over an existing mod version | Passed |
+| Fresh installation | Passed |
 | Uninstall and reinstall | Passed |
 | Custom running taskbar icon | Passed |
 | Shift-click opening another modified instance | Passed |
-| Taskbar pin/unpin and launch from pinned entry | Passed |
+| Pinning, unpinning, and launching from a taskbar pin | Passed |
 | T/Z keyboard shortcuts | Passed |
 
-## Known observation
+## Observed behavior
 
-The original red Xenetech icon may appear briefly during startup and is replaced by the digART icon once runtime branding has initialized.
+During startup, the original Xenetech icon may briefly appear before the mod's custom icon replaces it.
 
-## Notes
+## Compatibility scope
 
-These results reflect the observed test environment at the time of the v1.0 project milestone. They do not constitute independent certification or a guarantee on other machines.
+An installed copy of Xenetech Graphic Workstation is required. These results describe the tested configuration and do not establish support for other application versions, Windows releases, or hardware setups.

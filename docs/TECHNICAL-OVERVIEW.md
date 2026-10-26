@@ -1,50 +1,33 @@
-# Technical overview
+# Technical Overview
 
-## Engineering objective
+## Design
 
-Extend the user experience of an older native Windows application while minimizing changes to its on-disk installation. The approach separates the original application from the independently maintained launcher, enhancement modules, and installer.
+Xenetech digART Edition Mod extends the existing Xenetech Graphic Workstation application without permanently modifying its original executable. A separate launcher, runtime enhancements, and installer provide the modified experience while keeping the original application installation intact.
 
-## High-level components
+## Components
 
-| Component | Responsibility |
+| Component | Function |
 | --- | --- |
-| Launcher | Starts the installed application through the digART workflow |
-| Runtime customization | Adds selected interface and workflow behavior within the running application |
-| UI/branding layer | Applies visual changes and custom window branding |
-| Windows integration | Aligns installed shortcuts and taskbar identity with the digART launcher |
-| Installer | Deploys the modification separately and supports removal |
-| Verification | Checks packaged artifacts and tests behavior in isolated Windows environments |
+| Mod launcher | Starts the installed Xenetech application with the enhancement environment |
+| Runtime enhancement layer | Applies interface and workflow refinements during execution |
+| Interface and window branding | Updates selected native UI elements and the application's visible identity |
+| Windows desktop integration | Coordinates shortcuts, running-window identity, taskbar grouping and relaunch |
+| Custom installer | Installs and uninstalls the mod separately from Xenetech |
 
-## Interesting challenges
+## Native application integration
 
-### Crossing process architectures
+Xenetech Graphic Workstation is a native 32-bit Windows application. The mod uses a separate 64-bit launcher to coordinate startup and the runtime enhancement layer. This architecture preserves the existing executable while adding functionality around it.
 
-The original application is a 32-bit native Windows program, while the independent launcher is 64-bit. Making the two cooperate requires careful attention to Windows process and window behavior.
+## Taskbar identity and multiple instances
 
-### Real application windows versus the launcher
+The application's visible windows are owned by the original Xenetech process. At first, Windows displayed the original icon and used the original executable when opening another instance from the taskbar.
 
-The application window is owned by the native Xenetech process. Windows initially treated it as that original executable for taskbar icon and relaunch operations. The project addressed that mismatch by coordinating the launcher, shortcuts, and the running application's Windows Shell identity.
+The mod coordinates the running window's Windows Shell identity with its own launcher and installed shortcuts. This allows modified windows to group correctly and supports pinned launching and Shift-click multi-instance launching.
 
-### Multi-instance behavior
+## Workflow compatibility
 
-Launching the modified application twice from its desktop shortcut worked, but taskbar Shift-click originally followed the native executable path. The final project milestone tested corrected taskbar relaunch behavior and multiple modified instances on Windows 11.
+The runtime enhancements coexist with the application's native controls, keyboard handling, printing workflow, and normal window shutdown. Compatibility was checked through targeted tests and Windows 11 installation scenarios.
 
-### Maintaining existing behavior
+## Installation and removal
 
-Enhancements to keyboard handling, printing, native tools, and application redraw required targeted regression checks. Isolation and repeatability were important: a visible UI improvement should not break unrelated normal application interactions.
-
-### Installer repeatability
-
-The project was verified in both upgrade and fresh-install scenarios, including removal and independent launching from Windows shortcuts and taskbar pins.
-
-## What is intentionally excluded
-
-This document does **not** publish:
-
-- Runtime injection scripts or production controller/launcher source.
-- Reverse-engineered addresses, binary offsets, or hook signatures.
-- Proprietary application files or decompiled code.
-- License/registration research, backups, keys, or bypass procedures.
-- Private build tools, internal dependency bundles, or sensitive logs.
-
-This repository is a technical presentation of the project, **not** a set of instructions for reproducing its internals.
+The custom installer installs the modification as a separate Windows application. Both upgrade and fresh-install scenarios were tested, including removal and reinstallation, without replacing the original Xenetech executable.

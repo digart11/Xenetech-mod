@@ -1,11 +1,11 @@
-# Project status and distribution
+# Project Status
 
-**Status:** v1.0 milestone completed and validated on a Windows 11 VM.
+**Xenetech digART Edition Mod v1.0** is a completed development milestone, validated on Windows 11 x64 with Xenetech Graphic Workstation executable version `6.59.132.3`.
 
-**Repository purpose:** Public-facing documentation, screenshots, project history, and a general technical overview.
+The milestone includes the redesigned interface, printing and workflow enhancements, dedicated launcher, custom installer, taskbar branding, pinning, and Shift-click multi-instance launching.
 
-**Not published here:** production source, proprietary application components, bundled third-party runtime dependencies, license research, reverse-engineering artifacts, or the digART installer.
+## Distribution
 
-There is currently no public binary download from this repository. A separate review of redistribution rights, dependencies, software terms, and security implications would be required before offering one.
+This GitHub repository contains project documentation and screenshots. Neither the installer nor the production source code is distributed here. The mod requires a separately installed copy of Xenetech Graphic Workstation.
 
-This is an independent project showcase. It is not an official Xenetech product, customer-support channel, or promise of future releases.
+See [Compatibility and Validation](COMPATIBILITY.md) and the [Independent Project Disclaimer](../DISCLAIMER.md).

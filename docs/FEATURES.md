@@ -1,46 +1,39 @@
-# Features and interface improvements
+# Features and Interface Improvements
 
-This page describes the **visible behavior** of the digART modification. It deliberately does not expose production implementation details.
+**Xenetech digART Edition Mod** combines a redesigned interface with improvements to editing, printing, toolbar access, and Windows desktop behavior.
 
-## 1. Main interface
+## Main interface
 
-A redesigned dark visual treatment and interface refinements aimed at improving the everyday workspace while preserving the familiar underlying application.
+![Xenetech digART Edition Mod — main workspace](../screenshots/main-interface.png)
 
-**Screenshot:** `screenshots/main-interface.png` (to be added).
+The main workspace features a dark visual style and refinements to selected interface elements. The familiar Xenetech layout and underlying toolset remain available.
 
-## 2. Printer window and quick settings
+## Printing window and quick settings
 
-Printing-related interface improvements expose selected settings more conveniently. The printer-window screenshot will demonstrate the actual controls and explain what each one does.
+![Xenetech digART Edition Mod — printing settings](../screenshots/printer-window.png)
 
-**Screenshot:** `screenshots/printer-window.png` (to be added).
+Printing-related controls offer more convenient access to selected settings from the printer window, allowing quicker adjustments during output preparation.
 
-> Exact setting names and effects will be documented from the final screenshot rather than guessed.
+## Toolbar and quick tools
 
-## 3. Toolbar and quick tools
+![Xenetech digART Edition Mod — quick-access toolbar](../screenshots/toolbar-tools.png)
 
-Additional quick-access controls and enhancements to selected native tools, including Frame/Border workflow improvements, help reduce repetitive navigation.
+Quick-access controls bring commonly used operations closer to the workspace. The mod also refines selected native Frame and Border workflows.
 
-**Screenshot:** `screenshots/toolbar-tools.png` (to be added).
+## Keyboard shortcuts
 
-## 4. Keyboard and shortcuts
+![Xenetech digART Edition Mod — keyboard shortcuts](../screenshots/shortcuts.png)
 
-Keyboard behavior was refined for smoother interaction. T/Z shortcuts and normal text entry were specifically checked after the final taskbar integration changes.
+Keyboard handling supports efficient editing, including T/Z shortcut behavior, while maintaining compatibility with ordinary text entry.
 
-**Screenshot:** `screenshots/shortcuts.png` (to be added).
+## Custom installer
 
-> A detailed shortcut table can be added after confirming the mappings from the installed build or your reference material.
+![Xenetech digART Edition Mod — installer](../screenshots/installer.png)
 
-## 5. Installer and Windows integration
+The mod has its own launcher, installer, desktop shortcut, Start Menu entry, and uninstall support. It operates alongside the original Xenetech installation without replacing the original executable.
 
-The project has its own branded installer and launcher. On the validated Windows 11 VM, it supported:
+## Windows taskbar integration
 
-- Installation over an existing digART installation.
-- Uninstall and subsequent clean installation.
-- Desktop and Start Menu shortcuts pointing to the digART launcher.
-- Custom taskbar icon and application grouping.
-- Shift-clicking the running taskbar icon to open an additional modified instance.
-- Pinning, unpinning, and launching from the pinned taskbar shortcut.
+The mod's dedicated taskbar identity provides its own icon and keeps modified application windows grouped together. Launching from a pinned taskbar icon and Shift-clicking to open an additional modified instance were verified on Windows 11.
 
-**Screenshot:** `screenshots/installer.png` (to be added).
-
-The original Xenetech installation is required. The digART mod does not replace or redistribute the original program executable.
+For tested system configurations and validation details, see [Compatibility and Validation](COMPATIBILITY.md).

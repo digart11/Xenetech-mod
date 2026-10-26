@@ -1,21 +1,21 @@
-# Development story
+# Development Story
 
-## Why this project exists
+## Modernizing a familiar workstation
 
-Many long-lived desktop applications remain valuable because of their mature workflows and specialized capabilities. At the same time, their interfaces can feel out of step with modern Windows conventions. Xenetech digART Edition began as an exploration of how to improve that experience without replacing the original software.
+Xenetech Graphic Workstation is specialized software with long-established editing and production workflows. **Xenetech digART Edition Mod** began with the goal of refreshing the application experience while retaining its familiar tools and capabilities.
 
-## From interface changes to a complete desktop integration
+## From interface design to workflow improvements
 
-The effort developed beyond visual styling into practical quality-of-life improvements: more convenient controls, keyboard changes, workflow enhancements, printing-related refinements, and its own launch/install experience.
+The project grew beyond dark styling. It introduced quick-access actions, refinements to native tools, printing controls, keyboard improvements, and a dedicated launcher and installer. The challenge was to bring these changes into an established Windows application without disrupting its normal behavior.
 
-A particularly instructive Windows issue appeared near the end: the custom desktop shortcut opened the modified application, but the Windows taskbar still showed the original application identity. Shift-click therefore opened a native, unmodified instance instead of another digART instance.
+## Solving the taskbar relaunch problem
 
-The eventual solution involved treating the taskbar as an application-identity problem rather than simply an icon problem. The final candidate was tested with the custom running icon, taskbar grouping, Shift-click multi-instance relaunch, and pinning.
+One of the final issues appeared after the custom launcher and desktop shortcuts were already working: Windows still displayed Xenetech's original red taskbar icon. Shift-clicking the running application opened an unmodified instance instead of another modified window.
 
-## Validation and release milestone
+The solution was to coordinate Windows application identity and relaunch behavior across the mod launcher, shortcuts, and running window. The corrected build displayed the mod icon and supported taskbar pinning and Shift-click launching of additional modified instances.
 
-The finished v1.0 milestone was validated in a clean Windows 11 VM, both as an upgrade over an earlier digART installation and as a fresh installation after uninstalling. The verified installer was retained unchanged after acceptance testing, while earlier builds and test evidence were archived privately.
+## Testing the milestone
 
-## A note on scope
+The completed version was tested in a Windows 11 virtual machine. Upgrade installation, fresh installation, uninstall/reinstall, taskbar pinning, multi-instance relaunch, and T/Z keyboard behavior all passed the recorded checks.
 
-This account describes the public-facing project history, not a complete reverse-engineering diary. Sensitive implementation and third-party licensing material remain private.
+The result is an independent modification that combines visual modernization with practical workflow and desktop integration improvements.
