@@ -1,0 +1,23 @@
+# Keep this repository documentation-only.
+*.exe
+*.dll
+*.pdb
+*.zip
+*.7z
+*.rar
+*.xpi
+*.key
+*.xgwbak
+*.log
+*.dmp
+*.bak
+*.tmp
+node_modules/
+BuildWorkspace/
+Payload/
+Runtime/
+License Research/
+*.env
+.env*
+.DS_Store
+Thumbs.db
