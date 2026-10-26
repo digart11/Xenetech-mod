@@ -1,103 +1,89 @@
 <div align="center">
 
-# Xenetech digART Edition
+# Xenetech digART Edition Mod
 
-**An independent modernization project for Xenetech Graphic Workstation**
+**A modernized experience for Xenetech Graphic Workstation**
 
-*Updated interface · Faster everyday workflows · Native Windows integration · Independent installation*
+Dark interface · Workflow enhancements · Quick-access tools · Windows integration
 
-**Windows 11** · **Xenetech 6.59.132.3** · **Project milestone: v1.0**
+**Windows 11 x64** · **Xenetech 6.59.132.3** · **v1.0**
 
 </div>
 
-> [!NOTE]
-> **Project showcase.** This repository documents an independent, privately developed modification. It does not contain the modification's production source code, third-party software, or an installer download. Xenetech Graphic Workstation is a separate product and is required for the modification to operate.
-
 ## Overview
 
-Xenetech digART Edition is a personal engineering project exploring how an established Windows graphics workstation can be modernized **without permanently modifying its original executable**.
+**Xenetech digART Edition Mod** is an independently developed modification for Xenetech Graphic Workstation. It refreshes the application’s appearance and adds practical tools to make everyday work more convenient, while retaining the familiar Xenetech workflow.
 
-The project introduces interface refinements, additional workflow controls, keyboard improvements, printing-related enhancements, a dedicated launcher, and a custom installation experience. It also integrates with Windows taskbar identity and relaunch behavior so multiple modified instances can be opened using normal Windows interactions.
+The modification runs alongside an existing Xenetech installation through its own launcher. The original application executable is not permanently patched or replaced.
 
-The goal is not to replace Xenetech. It is to make selected everyday interactions with the existing application more consistent and convenient, while keeping the underlying installation separate.
+## Main interface
 
-## Interface preview
+![Xenetech digART Edition Mod — redesigned main workspace](screenshots/main-interface.png)
 
-<!-- Replace this line with an image when screenshots/main-interface.png is provided. -->
-**Main interface screenshot — coming soon**
+A redesigned dark workspace with updated visual styling and refinements to the main interface.
 
-The screenshots below will be added after personal and customer information is removed.
+## Features
 
-## What changed
+### Printing and quick settings
 
-| Area | Improvements |
+![Printer window showing digART printing controls and quick settings](screenshots/printer-window.png)
+
+The printing workflow includes additional interface controls and faster access to selected settings directly from the printer window.
+
+### Toolbar and quick tools
+
+![digART toolbar and quick-access tools](screenshots/toolbar-tools.png)
+
+Quick-access tools streamline commonly used actions. Additional enhancements cover selected native workflow controls, including Frame/Border operations.
+
+### Keyboard shortcuts
+
+![Keyboard shortcuts and workflow controls in digART Edition](screenshots/shortcuts.png)
+
+Shortcut handling has been refined for practical editing workflows, including T/Z behavior while preserving normal text input.
+
+### Windows integration
+
+The mod includes a dedicated launcher, application icon, desktop and Start Menu shortcuts, and Windows taskbar integration. On the tested Windows 11 setup, pinning the application and **Shift-clicking its taskbar icon to open another modded instance** both work as expected.
+
+### Custom installer
+
+![Xenetech digART Edition Mod installer](screenshots/installer.png)
+
+A dedicated branded installer supports both first-time setup and upgrading an existing digART installation, as well as uninstalling the modification separately from Xenetech.
+
+For a fuller description, see [Features](docs/FEATURES.md).
+
+## Technical highlights
+
+The project combines a separate launcher, runtime interface customization, native Windows integration, and modular workflow enhancements. A particular challenge was ensuring that Windows associated the running native application window with the digART launcher rather than the original executable. That work enabled consistent taskbar icons, pinned launching, and multi-instance relaunching.
+
+Read more in the [Technical Overview](docs/TECHNICAL-OVERVIEW.md) and [Development Story](docs/DEVELOPMENT-STORY.md).
+
+## Compatibility
+
+| | Tested configuration |
 | --- | --- |
-| **Main interface** | A redesigned dark presentation and refinements to the working environment |
-| **Printing workflow** | Additional controls and quicker access to selected printing settings |
-| **Toolbar & quick tools** | Faster access to useful workflow actions, including native tool enhancements |
-| **Keyboard** | Improved shortcut handling, including T/Z behavior and normal typing compatibility |
-| **Windows integration** | Dedicated icon and shortcuts, taskbar grouping, pinned launching, and Shift-click multi-instance relaunch |
-| **Installation** | A separate branded launcher and installer with uninstall support |
+| Operating system | Windows 11 x64 |
+| Xenetech version | Graphic Workstation executable 6.59.132.3 |
+| Application | Native 32-bit Xenetech with a separate 64-bit digART launcher |
+| Installation | Upgrade, fresh installation, uninstall/reinstall verified |
+| Windows integration | Custom taskbar icon, pinning, Shift-click multi-instance launching verified |
 
-For more details, see [Features](docs/FEATURES.md).
+The original Xenetech Graphic Workstation installation is required. Compatibility with other versions and environments has not been established. See [Compatibility and Validation](docs/COMPATIBILITY.md).
 
-## Gallery
+## Documentation
 
-Screenshots will document the actual tested interface:
-
-1. **Main workspace** — the primary UI and dark visual design.
-2. **Printer window** — added controls and quick settings.
-3. **Toolbar** — quick tools and enhanced workflow controls.
-4. **Shortcuts** — keyboard shortcut reference and behavior.
-5. **Installer** — the custom setup experience.
-
-Images will be stored in [`screenshots/`](screenshots/README.md). This repository intentionally avoids mockups presented as actual software captures.
-
-## How it works — at a high level
-
-```text
-User launches digART Edition
-          |
-          v
-    digART launcher
-          |
-          v
-Installed Xenetech application
-          |
-          v
-Runtime UI and workflow enhancements
-          |
-          v
-Modernized Xenetech experience
-```
-
-The project uses a separate launcher and runtime customization layer, rather than redistributing a modified Xenetech executable. The actual implementation, native hooks, internal offsets, and private research are not published here.
-
-Read the [Technical Overview](docs/TECHNICAL-OVERVIEW.md) for a non-sensitive architecture explanation.
-
-## Compatibility and project status
-
-- **Tested environment:** Windows 11 x64.
-- **Tested application:** Xenetech Graphic Workstation executable version **6.59.132.3**.
-- **Application architecture:** native 32-bit target, with a separate 64-bit launcher.
-- **Verification:** upgrade installation, fresh installation, uninstall/reinstall, desktop and pinned launching, custom taskbar icon, Shift-click opening another modified instance, and T/Z shortcuts were tested successfully in a Windows 11 VM.
-- **Known minor cosmetic behavior:** the original red application icon can appear briefly during startup before the custom icon takes over.
-
-**This is a documented project milestone, not a claim of universal compatibility or a public support commitment.**
-
-## Project notes
-
-- [Features and screenshots](docs/FEATURES.md)
-- [Technical overview](docs/TECHNICAL-OVERVIEW.md)
-- [Development story](docs/DEVELOPMENT-STORY.md)
-- [Compatibility and testing](docs/COMPATIBILITY.md)
-- [Project status and distribution](docs/STATUS.md)
-- [Disclaimer and rights](DISCLAIMER.md)
+- [Features and Improvements](docs/FEATURES.md)
+- [Technical Overview](docs/TECHNICAL-OVERVIEW.md)
+- [Development Story](docs/DEVELOPMENT-STORY.md)
+- [Compatibility and Validation](docs/COMPATIBILITY.md)
+- [Project Status](docs/STATUS.md)
 
 ## Availability
 
-This is currently a **documentation/showcase repository**. The production implementation, licensing-related research, and installer are not included. Any decision to distribute binaries or publish selected source examples will be made separately after a rights and security review.
+This repository presents the project, its functionality, and engineering background. It does not currently provide an installer download or the production implementation.
 
 ## Disclaimer
 
-Unofficial independent project. Not affiliated with, sponsored by, or endorsed by Xenetech. All third-party product names and trademarks belong to their respective owners. See [Disclaimer](DISCLAIMER.md).
+Xenetech digART Edition Mod is an independent, unofficial project. It is not affiliated with, sponsored by, or endorsed by Xenetech. Xenetech Graphic Workstation and related trademarks belong to their respective owners. See the [full disclaimer](DISCLAIMER.md).
